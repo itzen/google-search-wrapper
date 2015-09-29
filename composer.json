@@ -2,7 +2,7 @@
     "name": "gyvastis/google-keyword-position",
     "type": "library",
     "description": "Checks given keyword position in Google search.",
-    "keywords": ["log","logging"],
+    "keywords": ["google","keyword","position","domain"],
     "homepage": "https://github.com/Gyvastis/google-keyword-position",
     "license": "MIT",
     "authors": [
