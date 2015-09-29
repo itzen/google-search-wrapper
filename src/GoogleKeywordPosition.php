@@ -23,7 +23,7 @@ class GoogleKeywordPosition
         }
         else{
             echo "Domain not defined";
-            return false;
+            return 101;
         }
 
         $keyword = (string)$keyword;
@@ -36,7 +36,7 @@ class GoogleKeywordPosition
 
         if ($this->curl->error) {
             echo $this->curl->error_code;
-            return false;
+            return 102;
         }
 
         return $this->parseKeywordPositionFromGoogleOutput($domain, $this->curl->response);
@@ -50,7 +50,7 @@ class GoogleKeywordPosition
 
         if(count($search_results) == 0){
             echo "Fetching results failed";
-            return false;
+            return 103;
         }
 
         $keyword_position = false;
