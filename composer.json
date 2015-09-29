@@ -1,4 +1,18 @@
 {
+    "name": "gyvastis/google-keyword-position",
+    "type": "library",
+    "description": "Checks given keyword position in Google search.",
+    "keywords": ["log","logging"],
+    "homepage": "https://github.com/Gyvastis/google-keyword-position",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vaidas Bagdonas",
+            "email": "v@vaidasbagdonas.lt",
+            "homepage": "http://vaidasbagdonas.lt",
+            "role": "Developer"
+        }
+    ],
     "require": {
         "sunra/php-simple-html-dom-parser": "^1.5",
         "curl/curl": "^1.2"
