@@ -22,7 +22,8 @@ class GoogleKeywordPosition
             $domain = $domain[0];
         }
         else{
-            //Domain exception
+            echo "Domain not defined";
+            return false;
         }
 
         $keyword = (string)$keyword;
@@ -52,7 +53,7 @@ class GoogleKeywordPosition
             return false;
         }
 
-        $keyword_position = 0;
+        $keyword_position = false;
 
         foreach($search_results as $position => $search_result){
             if(strpos($search_result->plaintext, $domain) !== false){
