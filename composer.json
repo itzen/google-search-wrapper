@@ -6,6 +6,7 @@
     "autoload": {
         "psr-4": {
             "GoogleKeywordPosition\\": "src/"
-        }
+        },
+        "files": ["src/config.php"]
     }
 }
