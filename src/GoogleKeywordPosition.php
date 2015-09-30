@@ -9,10 +9,13 @@ class GoogleKeywordPosition
 {
     private $curl;
 
-    public function __construct(){
+    public function __construct($proxy = false){
         $this->curl = new Curl();
         $this->curl->setUserAgent('Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.101 Safari/537.36');
         $this->curl->setopt(CURLOPT_SSL_VERIFYPEER, FALSE);
+        if($proxy){
+            $this->curl->setopt(CURLOPT_PROXY, $proxy);
+        }
     }
 
     public function getKeywordPosition($domain, $keyword, $result_count = 20){
