@@ -52,6 +52,11 @@ class GoogleKeywordPosition
         $dom_parser = new HtmlDomParser();
         $html_doc = str_get_html($output);
 
+        if( ! $html_doc){
+            echo "Empty output";
+            return 104;
+        }
+
         $search_results = $html_doc->find('#rso .g .rc .s cite._Rm');
 
         if(count($search_results) == 0){
