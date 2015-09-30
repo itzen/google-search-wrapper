@@ -15,7 +15,7 @@ class GoogleKeywordPosition
         $this->curl->setopt(CURLOPT_SSL_VERIFYPEER, FALSE);
     }
 
-    public function getKeywordPosition($domain, $keyword){
+    public function getKeywordPosition($domain, $keyword, $result_count = 20){
         $domain = (string)$domain;
         preg_match("/([-a-z0-9]+\.[a-z]{2,6})/i", $domain, $domain);
         if($domain !== false) {
@@ -31,7 +31,7 @@ class GoogleKeywordPosition
 
         $this->curl->get("https://www.google.com/search", array(
             "q" => $keyword,
-            "num" => 100
+            "num" => $result_count
         ));
 
         if ($this->curl->error) {
