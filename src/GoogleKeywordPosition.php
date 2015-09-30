@@ -39,7 +39,10 @@ class GoogleKeywordPosition
             return 102;
         }
 
-        return $this->parseKeywordPositionFromGoogleOutput($domain, $this->curl->response);
+        $response = $this->curl->response;
+        $this->curl->close();
+
+        return $this->parseKeywordPositionFromGoogleOutput($domain, $response);
     }
 
     private function parseKeywordPositionFromGoogleOutput($domain, $output){
