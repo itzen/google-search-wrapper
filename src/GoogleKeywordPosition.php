@@ -19,15 +19,15 @@ class GoogleKeywordPosition
     }
 
     public function getKeywordPosition($domain, $keyword, $result_count = 20){
-        $domain = (string)$domain;
-        preg_match("/([-a-z0-9]+\.[a-z]{2,6})/i", $domain, $domain);
-        if($domain !== false) {
-            $domain = $domain[0];
-        }
-        else{
-            echo "Domain not defined";
-            return 101;
-        }
+//        $domain = (string)$domain;
+//        preg_match("/([-a-z0-9]+\.[a-z]{2,6})/i", $domain, $domain);
+//        if($domain !== false) {
+//            $domain = $domain[0];
+//        }
+//        else{
+//            echo "Domain not defined";
+//            return 101;
+//        }
 
         $keyword = (string)$keyword;
         $keyword = urlencode($keyword);
