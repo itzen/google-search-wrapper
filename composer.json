@@ -1,25 +1,22 @@
 {
-    "name": "gyvastis/google-keyword-position",
+    "name": "gyvastis/google-search-wrapper",
     "type": "library",
-    "description": "Checks given keyword position in Google search.",
-    "keywords": ["google","keyword","position","domain"],
-    "homepage": "https://github.com/Gyvastis/google-keyword-position",
-    "license": "MIT",
+    "description": "Search Google, retrieve results, get keyword positions for your domain.",
+    "keywords": ["google","search","keyword","position","domain"],
+    "homepage": "https://github.com/Gyvastis/google-search-wrapper",
     "authors": [
         {
-            "name": "Vaidas Bagdonas",
-            "email": "v@vaidasbagdonas.lt",
-            "homepage": "http://vaidasbagdonas.lt",
-            "role": "Developer"
+            "name": "Vaidas",
+            "email": "shibalba1@gmail.com"
         }
     ],
     "require": {
-        "sunra/php-simple-html-dom-parser": "^1.5",
-        "curl/curl": "^1.2"
+        "fabpot/goutte": "^3.1",
+        "symfony/css-selector": "^3.0"
     },
     "autoload": {
         "psr-4": {
-            "GoogleKeywordPosition\\": "src/"
+            "GoogleSearchWrapper\\": "src/"
         }
     }
 }

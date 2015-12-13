@@ -1,2 +1,2 @@
-# google-keyword-position
-Checks given keyword position in Google search.
+# google-search-wrapper
+Search Google, retrieve results, get keyword positions for your domain.
