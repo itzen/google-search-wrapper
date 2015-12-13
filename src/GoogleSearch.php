@@ -27,7 +27,7 @@ class GoogleSearch {
     private $last_results;
 
     public function __construct($proxy = false, $user_agent = false){
-        if($this->proxy && $this->isEliteProxy($proxy)) {
+        if($proxy && $this->isEliteProxy($proxy)) {
             $this->proxy = $proxy;
         }
 
@@ -42,18 +42,23 @@ class GoogleSearch {
     }
 
     private function isEliteProxy($proxy){
-        //throw exception..
+        //throw Exception if not
         return true;
     }
 
     private function setUpClient(){
         $this->client = new Client();
-        if($this->user_agent){
-            $this->client->setHeader('User-Agent', $this->user_agent);
-        }
-        if($this->proxy){
-            $this->client->getClient()->setDefaultOption('config/curl/'.CURLOPT_PROXY, $this->proxy);
-        }
+        $this->client->setHeader('User-Agent', $this->user_agent);
+        $this->client->setHeader('Accept-Language', 'en-gb');
+
+        $this->client->setClient(new \GuzzleHttp\Client([
+            'allow_redirects' => false,
+            'cookies' => true,
+            'verify' => false,
+            'proxy' => [
+                'https' => $this->proxy
+            ]
+        ]));
     }
 
     public function search($keyword, $limit = 20){
