@@ -56,7 +56,7 @@ class GoogleSearch {
             'cookies' => true,
             'verify' => false,
             'proxy' => [
-                'https' => $this->proxy
+                'http' => $this->proxy
             ]
         ]));
     }

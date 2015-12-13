@@ -7,7 +7,7 @@ require 'vendor/autoload.php';
 
 date_default_timezone_set('America/Chicago');
 
-$gs = new \GoogleSearchWrapper\GoogleSearch('149.202.56.98:8888');
+$gs = new \GoogleSearchWrapper\GoogleSearch('203.81.67.86:8080');
 
 $gs->search('Meme', 10);
 
