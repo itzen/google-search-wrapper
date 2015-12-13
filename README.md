@@ -8,4 +8,4 @@ Consider using proxies if you're planning to make a lot of requests, because lat
 
 The format for proxy is `IP:PORT`, for ex. `149.202.56.98:8888`.
 
-You can find elite proxies for testing here (must be HTTPS): http://www.google-proxy.net/
+You can find elite proxies for testing here: http://www.google-proxy.net/
