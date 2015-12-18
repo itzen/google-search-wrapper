@@ -2,6 +2,8 @@
 Search Google, retrieve results, get keyword positions for your domain.
 
 ## Usage
+`$ composer require Gyvastis/google-search-wrapper`
+
 An example of use is given in `example.php`.
 
 Consider using proxies if you're planning to make a lot of requests, because later on Google asks for human verification, but if you spread your requests through several proxies - it's all OK. 
