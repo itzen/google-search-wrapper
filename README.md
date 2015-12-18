@@ -9,3 +9,7 @@ Consider using proxies if you're planning to make a lot of requests, because lat
 The format for proxy is `IP:PORT`, for ex. `149.202.56.98:8888`.
 
 You can find elite proxies for testing here: http://www.google-proxy.net/
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/Gyvastis/google-search-wrapper/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
